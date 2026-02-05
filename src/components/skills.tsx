@@ -38,8 +38,8 @@ const skillsData: SkillCategory[] = [
     skills: [
       { name: 'Node.js', icon: '🟢' },
       { name: 'Python', icon: '🐍' },
+      { name: 'MySQL', icon: '🐬' },
       { name: 'PostgreSQL', icon: '🐘' },
-      { name: 'MongoDB', icon: '🍃' },
       { name: 'Firebase', icon: '🔥' },
     ],
   },
