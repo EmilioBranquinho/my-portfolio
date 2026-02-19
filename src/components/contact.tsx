@@ -3,7 +3,26 @@
 import React from "react"
 
 import { useState } from 'react';
-import { Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Github, Instagram, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
+
+const socialNetworks = [
+  {
+    name: 'Github',
+    icon: <Github/>,
+    url: "https://github.com/EmilioBranquinho"
+  }, 
+  {
+    name: 'Linkedin',
+    icon: <Linkedin/>,
+    url: "https://www.linkedin.com/in/em%C3%ADlio-branquinho"
+  },
+  {
+    name: 'Instagram',
+    icon: <Instagram/>,
+    url: "https://www.instagram.com/tffisthishomie"
+  }
+  
+]
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -63,8 +82,8 @@ export default function Contact() {
                 {
                   icon: Phone,
                   label: 'Phone',
-                  value: '+258 833517395',
-                  href: 'tel:+258833517395',
+                  value: '+258 862399225 / 833517395',
+                  href: 'tel:+258862399225',
                 },
                 {
                   icon: MapPin,
@@ -81,7 +100,7 @@ export default function Contact() {
                     className="flex items-start gap-4 group animate-fade-in-up"
                     style={{ animationDelay: `${index * 0.15}s` }}
                   >
-                    <div className="bg-primary/20 p-3 rounded-lg group-hover:bg-primary/30 transition-all duration-300">
+                    <div className="bg-black p-3 rounded-lg group-hover:bg-primary/30 transition-all duration-300">
                       <Icon className="text-primary" size={20} />
                     </div>
                     <div>
@@ -99,13 +118,14 @@ export default function Contact() {
             <div className="pt-8 border-t border-border">
               <p className="text-sm text-muted-foreground mb-4">My social networks</p>
               <div className="flex gap-4">
-                {['Github', 'LinkedIn', 'Twitter', 'Instagram'].map((social) => (
+                {socialNetworks.map((social) => (
                   <a
-                    key={social}
-                    href="#"
-                    className="w-12 h-12 bg-secondary hover:bg-primary/20 border border-border hover:border-primary rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 font-semibold text-sm"
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    className="w-12 h-12 bg-black hover:bg-primary/20 border border-border hover:border-primary rounded-lg flex items-center justify-center transition-all duration-300 transform hover:scale-110 font-semibold text-sm"
                   >
-                    {social.slice(0, 1)}
+                    {social.icon} 
                   </a>
                 ))}
               </div>
@@ -125,7 +145,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Your name"
                   required
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 text-foreground placeholder-muted-foreground"
+                  className="w-full px-4 py-3 bg-gray-300 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 placeholder-muted-foreground text-black"
                 />
               </div>
 
@@ -139,7 +159,7 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="your.email@example.com"
                   required
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 text-foreground placeholder-muted-foreground"
+                  className="w-full px-4 py-3 bg-gray-300 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 placeholder-muted-foreground text-black"
                 />
               </div>
 
@@ -153,7 +173,7 @@ export default function Contact() {
                   placeholder="Your message here..."
                   rows={5}
                   required
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 text-foreground placeholder-muted-foreground resize-none"
+                  className="w-full px-4 py-3 bg-gray-300 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300 placeholder-muted-foreground resize-none text-black"
                 />
               </div>
 

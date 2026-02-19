@@ -29,7 +29,7 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-secondary/30">
+    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-black">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16 animate-fade-in-up">
           <p className="text-primary font-semibold text-sm mb-2">My Trajectory</p>
@@ -84,7 +84,7 @@ export default function Experience() {
           ].map((milestone, index) => (
             <div
               key={milestone.year}
-              className="text-center animate-fade-in-up p-4 rounded-lg border border-border bg-card hover:border-primary/50 transition-all duration-300"
+              className="text-center animate-fade-in-up p-4 rounded-lg border border-border bg-black hover:border-primary/50 transition-all duration-300"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               <p className="text-2xl font-bold text-primary">{milestone.year}</p>

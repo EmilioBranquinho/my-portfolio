@@ -9,7 +9,7 @@ import Navigation from '@/components/navigation';
 
 export default function Home() {
   return (
-    <div className="dark bg-background text-foreground min-h-screen">
+    <div className="dark bg-black text-foreground min-h-screen">
       <Navigation />
       <Hero />
       <Projects />

@@ -81,7 +81,7 @@ export default function Skills() {
               className="animate-fade-in-up"
               style={{ animationDelay: `${groupIndex * 0.15}s` }}
             >
-              <div className="p-6 rounded-xl border border-border bg-card hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-full">
+              <div className="p-6 rounded-xl border border-border bg-black hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-full">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="text-primary">{skillGroup.icon}</div>
                   <h3 className="text-lg font-bold text-primary">{skillGroup.category}</h3>
@@ -90,7 +90,7 @@ export default function Skills() {
                   {skillGroup.skills.map((skill, skillIndex) => (
                     <div
                       key={skill.name}
-                      className="flex flex-col items-center justify-center p-4 rounded-lg border border-border/50 hover:border-primary/50 bg-secondary/30 hover:bg-secondary/60 transition-all duration-300 cursor-pointer group hover:shadow-lg hover:shadow-primary/10"
+                      className="flex flex-col items-center justify-center p-4 rounded-lg border border-border/50 hover:border-primary/50 bg-black hover:bg-secondary/60 transition-all duration-300 cursor-pointer group hover:shadow-lg hover:shadow-primary/10"
                       style={{ animationDelay: `${groupIndex * 0.15 + skillIndex * 0.05}s` }}
                     >
                       <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">

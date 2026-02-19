@@ -32,11 +32,11 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-background/80 backdrop-blur-md border-b border-border' : ''
+        isScrolled ? 'bg-black backdrop-blur-md border-b ' : ''
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        <div className="text-2xl font-bold bg-gradient-to-r from-white to-black bg-clip-text text-transparent">
           Dev
         </div>
 
@@ -46,7 +46,7 @@ export default function Navigation() {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="text-sm font-medium hover:text-primary transition-colors duration-200"
+              className={`text-sm font-medium hover:text-primary transition-colors duration-200`}
             >
               {link.label}
             </button>
@@ -64,13 +64,13 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-background border-t border-border animate-fade-in-down">
+        <div className="md:hidden bg-black border-t border-border animate-fade-in-down">
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="block w-full text-left px-4 py-2 rounded-lg hover:bg-secondary text-foreground hover:text-primary transition-colors"
+                className="block w-full text-left px-4 py-2 rounded-lg hover:bg-secondary text-white hover:text-black hover:bg-white transition-colors"
               >
                 {link.label}
               </button>
