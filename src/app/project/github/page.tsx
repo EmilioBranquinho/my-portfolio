@@ -38,7 +38,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
 
           {/* Frontend */}
-          {frontend != "undefined" && (
+          {frontend && frontend != "undefined" && (
             <ProjectCard
               name="Frontend"
               description="Modern and responsive web interface"
@@ -51,7 +51,7 @@ export default function Home() {
           )}
 
           {/* Mobile */}
-          {mobile !== "undefined" && (
+          {mobile && mobile !== "undefined" && (
             <ProjectCard
               name="Mobile"
               description="Native and smooth mobile application"
@@ -64,7 +64,7 @@ export default function Home() {
           )}
 
           {/* Backend */}
-          {backend != "undefined" && (
+          {backend && backend !== "undefined" && (
             <ProjectCard
               name="Backend"
               description="Robust and scalable API"
@@ -98,7 +98,7 @@ function ProjectCard({
   name: string;
   description: string;
   icon: string;
-  url: string | undefined | null;
+  url: string;
   color: string;
   delay: number;
   mounted: boolean;
