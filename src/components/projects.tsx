@@ -34,11 +34,11 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Dashboard Analytics',
+    title: 'Car sales platform',
     description:
-      'Real-time dashboard with interactive charts, data analysis and custom reports.',
+      'A Basic car sales platfom with authentication, form validation,  contact via WhatsApp, controlled componetization and complete CRUD.',
     image: 'profile-picture.png',
-    tags: ['React', 'D3.js', 'WebSocket', 'Node.js'],
+    tags: ['React.js', 'Typescript', 'tailwindCSS', 'Radix UI', 'Firebase', 'zod', 'cloudinary'],
     frontend: "https://github.com/EmilioBranquinho/my-portfolio",
     link: '#',
     github: '#',
