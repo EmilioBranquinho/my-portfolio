@@ -1,4 +1,5 @@
 'use client';
+export const dynamic = 'force-dynamic';
 
 import { Github } from 'lucide-react';
 import Link from 'next/link';
@@ -19,7 +20,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-background via-background to-background">
+    <main className="min-h-screen bg-black">
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-12">
 
         {/* Header */}
@@ -116,10 +117,10 @@ function ProjectCard({
           className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r ${color} blur-xl`}
         />
 
-        <div className="relative h-full p-8 rounded-2xl border-2 border-primary/20 bg-card/50 backdrop-blur-xl hover:bg-card/80 transition-all duration-300 group-hover:border-accent/50 group-hover:shadow-2xl">
+        <div className="relative h-full p-8 rounded-2xl border-2 border-primary/20  backdrop-blur-xl  transition-all duration-300 group-hover:border-accent/50 group-hover:shadow-2xl">
           <div className="text-6xl mb-6">{icon}</div>
 
-          <h2 className="text-2xl font-bold mb-2">{name}</h2>
+          <h2 className="text-2xl text-white font-bold mb-2">{name}</h2>
           <p className="text-muted-foreground mb-6">{description}</p>
 
           <div className="flex items-center gap-2 text-accent font-semibold">
