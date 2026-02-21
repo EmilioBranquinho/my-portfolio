@@ -15,7 +15,8 @@ interface Project {
   github: string;
   frontend?: string;
   backend?: string;
-  mobile?: string
+  mobile?: string,
+  bg?: string
 }
 
 const projects: Project[] = [
@@ -23,9 +24,10 @@ const projects: Project[] = [
     id: 1,
     title: 'Pizza store management system',
     description:
-      'Complete fullstack project of a management system for pizza stores, with complete CRUD, mobile app and advanced admin panel.',
+      'Complete fullstack project of a management system for pizza stores, robust authentication, complete CRUD, mobile app and advanced admin panel.',
     image: "/los-polos-hermanos-logo.jpg",
     tags: ['Next.js', 'TypeScript', 'Node.js', 'express', 'PostgreSQL', 'Sass', 'Prisma', 'JWT ', 'Bcrypt'],
+    bg: "#FFF",
     link: 'https://los-pollos-hermanos-six.vercel.app/',
     frontend: "https://github.com/EmilioBranquinho/los-pollos-hermanos-frontend",
     backend: "https://github.com/EmilioBranquinho/los-pollos-hermanos",
@@ -39,20 +41,22 @@ const projects: Project[] = [
       'A Basic car sales platfom with authentication, form validation,  contact via WhatsApp, controlled componetization and complete CRUD.',
     image: 'profile-picture.png',
     tags: ['React.js', 'Typescript', 'tailwindCSS', 'Radix UI', 'Firebase', 'zod', 'cloudinary'],
+    bg: "#000",
     frontend: "https://github.com/EmilioBranquinho/my-portfolio",
     link: '#',
     github: '#',
   },
-  // {
-  //   id: 3,
-  //   title: 'SaaS App',
-  //   description:
-  //     'Modern SaaS application with robust authentication, team management and external API integration.',
-  //   image: 'https://images.unsplash.com/photo-1460925895917-adf4e565f900?w=800&q=80',
-  //   tags: ['Next.js', 'Supabase', 'TailwindCSS', 'Vercel'],
-  //   link: '#',
-  //   github: '#',
-  // },
+  {
+    id: 3,
+    title: 'Public task management system',
+    description:
+      'Modern SaaS application to manage personal tasks and optionally share, with Google Provider authentication and external API integration.',
+    image: '/tarefas-ultimate-logo.png',
+    tags: ['Next.js', 'Firebase', 'Typescript' ,'TailwindCSS', 'NextAuth.js', 'zod' ,'Vercel'],
+    bg: "#FFF",
+    link: '#',
+    github: '#',
+  },
   // {
   //   id: 4,
   //   title: 'Mobile App',
@@ -106,7 +110,7 @@ export default function Projects() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Container */}
-              <div className={ project.title === "Pizza store management system" ? "bg-white relative h-48 overflow-hidden":  "relative h-48 overflow-hidden bg-gray-900"}>
+              <div className={`relative h-48 overflow-hidden bg-[${project.bg}]`}>
                 <Image
                   src={project.image}
                   alt={project.title}
