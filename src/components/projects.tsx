@@ -39,12 +39,11 @@ const projects: Project[] = [
     title: 'Car sales platform',
     description:
       'A Basic car sales platfom with authentication, form validation,  contact via WhatsApp, controlled componetization and complete CRUD.',
-    image: 'profile-picture.png',
+    image: '/lowprice-cars-logo.png',
     tags: ['React.js', 'Typescript', 'tailwindCSS', 'Radix UI', 'Firebase', 'zod', 'cloudinary'],
     bg: "#000",
-    frontend: "https://github.com/EmilioBranquinho/my-portfolio",
-    link: '#',
-    github: '#',
+    link: 'https://lowprice-cars.vercel.app',
+    github: 'https://github.com/EmilioBranquinho/lowprice-cars',
   },
   {
     id: 3,
@@ -52,10 +51,10 @@ const projects: Project[] = [
     description:
       'Modern SaaS application to manage personal tasks and optionally share, with Google Provider authentication and external API integration.',
     image: '/tarefas-ultimate-logo.png',
-    tags: ['Next.js', 'Firebase', 'Typescript' ,'TailwindCSS', 'NextAuth.js', 'zod' ,'Vercel'],
+    tags: ['Next.js', 'Firebase', 'Typescript' ,'TailwindCSS', 'NextAuth.js', 'zod','Vercel'],
     bg: "#FFF",
-    link: '#',
-    github: '#',
+    link: 'https://tarefas-ultim8.vercel.app',
+    github: 'https://github.com/EmilioBranquinho/tarefas-ultimate',
   },
   // {
   //   id: 4,
@@ -110,7 +109,7 @@ export default function Projects() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Container */}
-              <div className={`relative h-48 overflow-hidden bg-[${project.bg}]`}>
+              <div className={`relative h-48 overflow-hidden bg-[#FFF]`}>
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -150,7 +149,8 @@ export default function Projects() {
                     Demo
                   </a>
                   <Link
-                    href={`/project/github?frontend=${project.frontend}&backend=${project.backend}&mobile=${project.mobile}`}
+
+                    href={!project.frontend && !project.backend && !project.mobile ? `${project.github}` : `/project/github?frontend=${project.frontend}&backend=${project.backend}&mobile=${project.mobile}`}
                     className="flex-1 flex items-center justify-center gap-2 bg-black border border-primary/30 text-primary py-2 rounded-lg hover:bg-primary/10 transition-all duration-300 text-sm font-medium"
                   >
                     <Github size={16} />
@@ -162,23 +162,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 text-center animate-fade-in-up">
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primary text-black font-bold rounded-lg hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 transform hover:scale-105"
-          >
-            View Demo
-            <ExternalLink size={20} />
-          </a>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-8 py-4 border border-primary text-primary font-bold rounded-lg hover:bg-primary/10 transition-all duration-300"
-          >
-            View Code
-            <Github size={20} />
-          </a>
-        </div>
       </div>
     </section>
   );

@@ -4,7 +4,7 @@ import { CheckCircle } from 'lucide-react';
 
 interface ExperienceItem {
   id: number;
-  company: string;
+  // company: string;
   position: string;
   period: string;
   description: string;
@@ -14,15 +14,15 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    company: 'TechStart Solutions',
-    position: 'Senior Full Stack Developer',
-    period: '2022 - Presente',
-    description: 'Liderei o desenvolvimento de aplicações web escaláveis para clientes enterprise.',
+    // company: 'TechStart Solutions',
+    position: 'Freelancer Full Stack Developer',
+    period: '2025 - Present',
+    description: 'I created solutions as a freelancer to small and medium companies, creating efficient and scalable web and mobile aplications',
     achievements: [
-      'Aumentei performance do sistema em 200%',
-      'Mentoriei 5 desenvolvedores junior',
-      'Implementei arquitetura microserviços',
-      'Reduzi tempo de deploy em 60%',
+      'I developed management systems to facilitate work and improve resource control.',
+      'Automatized repeatable tasks',
+      'Solved people problems using programming',
+      'Reduced the time to realize task with efficient softwares',
     ],
   },
 ];
@@ -50,7 +50,7 @@ export default function Experience() {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                   <div>
                     <h3 className="text-2xl font-bold text-foreground">{exp.position}</h3>
-                    <p className="text-primary font-semibold">{exp.company}</p>
+                    {/* <p className="text-primary font-semibold">{exp.company}</p> */}
                   </div>
                   <span className="text-sm text-muted-foreground mt-2 md:mt-0">{exp.period}</span>
                 </div>
@@ -75,7 +75,7 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Timeline Badge */}
+        {/* Timeline Badge
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6 pt-20 border-t border-border">
           {[
             { year: '2019', label: 'Começei minha jornada' },
@@ -91,7 +91,7 @@ export default function Experience() {
               <p className="text-sm text-muted-foreground mt-1">{milestone.label}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
