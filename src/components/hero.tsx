@@ -70,7 +70,7 @@ export default function Hero() {
               <Mail size={18} className="group-hover:translate-x-1 transition-transform" />
             </a> */}
             <a
-              href="/downloads/Emilio%20Branquinho%20cv.pdf"
+              href="/public/downloads/%20cv.pdf"
               download
               className="border border-primary text-primary px-8 py-3 rounded-lg font-semibold flex items-center gap-2 hover:bg-white/10 transition-all duration-300 justify-center"
             >
